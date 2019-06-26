@@ -15,15 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('auto_folio.urls')),
 ]
-
-# from django.conf.urls import url, include
-# from django.contrib import admin
-#
-# urlpatterns = [
-#     url(r'^auto_folio/', include('auto_folio.urls')),
-#     url(r'^admin/', admin.site.urls),
-# ]

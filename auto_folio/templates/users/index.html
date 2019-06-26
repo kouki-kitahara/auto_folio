@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+
+{% block contents %}
+
+<a href="{% url 'user_new' %}" class="top-menu">
+    新規登録<span class="glyphicon glyphicon-plus"></span>
+</a>
+
+{% for user in users %}
+<div class="items">
+    <h3><a href="{% url 'user_show' pk=user.pk %}">{{ user.name }}</a></h3>
+</div>
+{% endfor %}
+
+{% endblock %}
